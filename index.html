@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -398,7 +398,7 @@
     </button>
     <button class="tab-btn" data-tab="secuencias" aria-selected="false" aria-controls="panel-secuencias" onclick="showTab('secuencias',this)" role="tab">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v18H6a2 2 0 0 1-2-1.5z"/><path d="M8 7h8"/><path d="M8 11h8"/></svg>
-      Secuencias didácticas
+      Materiales para el aula
     </button>
     <button class="tab-btn" data-tab="anexo" aria-selected="false" aria-controls="panel-anexo" onclick="showTab('anexo',this)" role="tab">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"/><path d="M5 8h14"/><path d="M7 16h10"/></svg>
@@ -469,7 +469,7 @@
         <span class="badge badge-pur">Ciclo Básico 1.°-2.° año</span>
         <span class="badge badge-ref-pur">Basado en el DC Secundario 2015 y el DC Educación Digital, Programación y Robótica 2021</span>
       </div>
-      <p>El foco es el paso «de la magia a la mecánica», recuperando la base de Nivel Primario, pero avanzando hacia un aprendizaje con IA mediado y supervisado por el docente.</p>
+      <p>El foco es el paso «de la magia a la mecánica» y la alfabetización para un uso seguro y responsable.</p>
     </div>
 
     <div class="cycle-support-grid">
@@ -509,7 +509,7 @@
 
     <div class="warn-box" style="margin-top:16px">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" style="flex-shrink:0;margin-top:1px"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-      <p>Toda actividad en Ciclo Básico requiere mediación docente directa y se realiza de forma grupal. El foco es el asombro, la curiosidad y la reflexión crítica, no la autonomía técnica.</p>
+      <p>En el Ciclo Básico se recupera la base de Nivel Primario y se avanza hacia un aprendizaje con IA mediado y supervisado por el docente.</p>
     </div>
   </div>
 
@@ -700,7 +700,7 @@
   <div class="panel" id="panel-secuencias" role="tabpanel">
     <p class="rubrica-intro">Espacio para organizar propuestas de enseñanza, recorridos de aula y actividades secuenciadas por ciclo o grado.</p>
     <div class="empty-state">
-      <span class="badge badge-amb">Secuencias didácticas</span>
+      <span class="badge badge-amb">Materiales para el aula</span>
       <p>Espacio preparado para sumar propuestas de implementación, recorridos de aula y actividades por ciclo o grado.</p>
     </div>
   </div>
@@ -785,7 +785,7 @@ function showRubrica(id, btn) {
 // ── SEARCH ───────────────────────────────────────────────────
 const ENTRIES = [
   {tab:'docs',grade:null,subject:'Documentos complementarios',gradeLabel:'Materiales',keywords:'documentos complementarios materiales consulta recursos apoyo'},
-  {tab:'secuencias',grade:null,subject:'Secuencias didácticas',gradeLabel:'Propuestas',keywords:'secuencias didácticas propuestas aula actividades implementación'},
+  {tab:'secuencias',grade:null,subject:'Materiales para el aula',gradeLabel:'Propuestas',keywords:'secuencias didácticas propuestas aula actividades implementación'},
   {tab:'anexo',grade:null,subject:'Anexo IA',gradeLabel:'Anexo',keywords:'anexo ia inteligencia artificial materiales asociados'},
 
   {tab:'primer',grade:'g1',subject:'Tecnologías, Diseño y Programación',gradeLabel:'1.° grado',keywords:'inteligencia artificial aplicaciones utilidades experimenta reconocimiento dibujos patrones reflexión procesos tecnológicos impacto vida personas recursos digitales experimentación'},
@@ -828,7 +828,7 @@ const ENTRIES = [
   {tab:'rubrica',grade:'r1',subject:'Agencia y uso estratégico',gradeLabel:'Rúbrica docente',keywords:'agencia uso estratégico delegación cognitiva asistentes conversacionales borradores prompts precisas calidad'},
   {tab:'rubrica',grade:'r1',subject:'Protección digital',gradeLabel:'Rúbrica docente',keywords:'protección digital información personal datos personales perfilamiento automatizado privacidad autoría propiedad intelectual'},];
 
-const TAB_LABELS = {primer:'Ciclo Básico',segundo:'Ciclo Orientado',etico:'Eje ético',pdi:'Eje Protección Digital',rubrica:'Rúbrica',docs:'Documentos complementarios',secuencias:'Secuencias didácticas',anexo:'Anexo IA',mapa:'Mapa'};
+const TAB_LABELS = {primer:'Ciclo Básico',segundo:'Ciclo Orientado',etico:'Eje ético',pdi:'Eje Protección Digital',rubrica:'Rúbrica',docs:'Documentos complementarios',secuencias:'Materiales para el aula',anexo:'Anexo IA',mapa:'Mapa'};
 const TAB_COLORS = {primer:'badge-pur',segundo:'badge-tea',etico:'badge-amb',pdi:'badge-blu',rubrica:'badge-cor',docs:'badge-blu',secuencias:'badge-amb',anexo:'badge-cor',mapa:'badge-blu'};
 
 function escapeRe(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
@@ -923,10 +923,6 @@ document.addEventListener('keydown', e => {
   .search-item-subject, .cycle-row p, .eje-card p, .sub-btn, .sub-btn-rub, .sub-btn-pc, .dot-list li, .principio-desc, .pregunta-item p, .rubrica-table, .nota-ped p { font-size: 14px !important; }
   header .meta, .badge, .btn-print, .search-item-preview, .cycle-row .glabel, .ejes-dig-label, .ej, .leyenda-estrella, .chip, .pregunta-num { font-size: 13px !important; }
   .search-hint, .area-label, .nota-ped .slabel { font-size: 12px !important; }
-  .search-clear { font-size: 18px !important; }
-</style>
-
-
   .search-clear { font-size: 18px !important; }
 </style>
 
